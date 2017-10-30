@@ -115,6 +115,8 @@ function resolver(src) {
     } else {
       element = doc.createElement('script');
       element.charset = 'utf8';
+      element.async = false;
+      element.defer = false;
       element.src = src.url;
 
       loader = 'onload' in element
